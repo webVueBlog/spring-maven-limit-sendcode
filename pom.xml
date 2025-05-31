@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 定义Maven项目 -->
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <!-- 指定Maven项目的模型版本 -->
+    <modelVersion>4.0.0</modelVersion>
+
+    <!-- 定义项目的组ID -->
+    <groupId>com.anji.captcha</groupId>
+    <!-- 定义项目的工件ID -->
+    <artifactId>aj-captcha-parent</artifactId>
+    <!-- 定义项目的版本 -->
+    <version>0.0.1-SNAPSHOT</version>
+    <!-- 定义项目的打包方式 -->
+    <packaging>pom</packaging>
+
+    <!-- 定义项目的属性 -->
+    <properties>
+        <!-- 定义Spring Boot的版本 -->
+        <springboot.version>2.0.4.RELEASE</springboot.version>
+        <!-- 定义验证码核心库的版本 -->
+        <captcha.core.version>1.2.0</captcha.core.version>
+        <!-- 定义源代码的编译版本 -->
+        <maven.compiler.source>1.8</maven.compiler.source>
+        <!-- 定义目标代码的编译版本 -->
+        <maven.compiler.target>1.8</maven.compiler.target>
+        <!-- 定义项目的编码 -->
+        <encoding>UTF-8</encoding>
+    </properties>
+    <!-- 定义依赖管理 -->
+    <dependencyManagement>
+        <dependencies>
+            <!-- 定义Spring Boot的Web依赖 -->
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-starter-web</artifactId>
+                <version>${springboot.version}</version>
+            </dependency>
+            <!-- 定义Spring Boot的测试依赖 -->
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-starter-test</artifactId>
+                <version>${springboot.version}</version>
+            </dependency>
+            <!-- 定义Spring Boot的Redis依赖 -->
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-starter-data-redis</artifactId>
+                <version>${springboot.version}</version>
+                <scope>provided</scope>
+            </dependency>
+            <!-- 定义验证码核心库的依赖 -->
+            <dependency>
+                <groupId>com.github.anji-plus</groupId>
+                <artifactId>captcha</artifactId>
+                <version>${captcha.core.version}</version>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+    <!-- 定义项目的模块 -->
+    <modules>
+        <!-- 定义验证码核心模块 -->
+        <module>core/captcha</module>
+        <!-- 定义验证码Spring Boot Starter模块 -->
+        <module>core/captcha-spring-boot-starter</module>
+        <!-- 定义Spring MVC服务模块 -->
+        <module>service/springmvc</module>
+        <!-- 定义Spring Boot服务模块 -->
+        <module>service/springboot</module>
+    </modules>
+</project>

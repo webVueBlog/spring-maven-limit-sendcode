@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+    <!-- 日志文件存放路径 -->
+    <property name="LOG_HOME" value="./logs"/>
+    <!-- 日志文件名称 -->
+    <property name="LOG_NAME" value="aj-captcha"/>
+
+    <!--控制台-->
+    <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+        <!-- 日志输出格式 -->
+        <encoder>
+            <pattern>%d{MM-dd HH:mm:ss.SSS} | %thread |-%-5level %logger{36}:%L - %msg%n</pattern>
+            <!-- 输出：2022-01-01 12:00:00.000 | main | INFO  captcha.controller.CaptchaController:25 - CaptchaController-->
+        </encoder>
+        <!-- 日志输出级别 -->
+        <filter class="ch.qos.logback.classic.filter.ThresholdFilter">
+            <level>INFO</level>
+        </filter>
+    </appender>
+
+    <!-- 日志文件 -->
+    <appender name="LOGFILE" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <!-- 日志文件路径 -->
+        <file>${LOG_HOME}/${LOG_NAME}.log</file>
+        <!-- 日志文件滚动策略 -->
+        <rollingPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedRollingPolicy">
+            <!-- 日志文件路径和名称 -->
+            <fileNamePattern>${LOG_HOME}/%d{yyyy-MM-dd}/${LOG_NAME}-%i.log</fileNamePattern>
+            <!-- 日志文件最大大小 -->
+            <maxFileSize>50MB</maxFileSize>
+            <!-- 日志文件最大保存天数 -->
+            <maxHistory>30</maxHistory>
+        </rollingPolicy>
+        <!-- 日志输出格式 -->
+        <layout class="ch.qos.logback.classic.PatternLayout">
+            <pattern>%d{MM-dd HH:mm:ss.SSS} |-%-5level %logger{36}:%L - %m%n</pattern>
+        </layout>
+    </appender>
+
+    <!-- 根日志级别 -->
+    <root level="INFO">
+        <!-- 控制台输出 -->
+        <appender-ref ref="STDOUT"/>
+        <!-- 文件输出 -->
+        <appender-ref ref="LOGFILE"/>
+    </root>
+</configuration>

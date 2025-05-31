@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 定义项目信息 -->
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <!-- 指定父项目 -->
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>2.3.5.RELEASE</version>
+    </parent>
+
+    <!-- 指定项目信息 -->
+    <groupId>com.anji.captcha</groupId>
+    <artifactId>captcha-springboot</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+
+    <!-- 指定项目名称 -->
+    <name>captcha-springboot-demo</name>
+    <!-- 指定项目描述 -->
+    <description>anji-plus captcha demo</description>
+    <!-- 指定项目网址 -->
+    <url>/captcha</url>
+    <!-- 指定项目打包方式 -->
+    <packaging>jar</packaging>
+
+    <!-- 指定项目属性 -->
+    <properties>
+        <!-- 指定Java版本 -->
+        <java.version>1.8</java.version>
+        <!-- 指定Spring Boot版本 -->
+        <spring-boot-version>2.3.5.RELEASE</spring-boot-version>
+        <!-- 跳过测试 -->
+        <skipTests>true</skipTests>
+    </properties>
+
+    <!-- Add typical dependencies for a web application -->
+    <!-- 依赖 -->
+    <dependencies>
+        <!-- 验证码依赖 -->
+        <dependency>
+            <groupId>com.anji-plus</groupId>
+            <artifactId>spring-boot-starter-captcha</artifactId>
+            <version>1.3.1</version>
+        </dependency>
+
+        <!-- Redis依赖 -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-data-redis</artifactId>
+        </dependency>
+
+        <!-- Web依赖 -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
+
+        <!-- Fastjson依赖 -->
+        <dependency>
+            <groupId>com.alibaba</groupId>
+            <artifactId>fastjson</artifactId>
+            <version>1.2.70</version>
+        </dependency>
+
+
+        <!-- 测试依赖 -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-test</artifactId>
+            <scope>test</scope>
+            <exclusions>
+                <!-- 排除JUnit Vintage引擎 -->
+                <exclusion>
+                    <groupId>org.junit.vintage</groupId>
+                    <artifactId>junit-vintage-engine</artifactId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+
+    </dependencies>
+
+    <!-- 构建 -->
+    <build>
+        <plugins>
+            <!-- Spring Boot Maven插件 -->
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+            </plugin>
+        </plugins>
+    </build>
+</project>

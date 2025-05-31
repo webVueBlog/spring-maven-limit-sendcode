@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <!-- 指定POM模型版本 -->
+    <modelVersion>4.0.0</modelVersion>
+
+    <!-- 指定父项目 -->
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>2.3.5.RELEASE</version>
+    </parent>
+
+    <!-- 指定项目组ID -->
+    <groupId>com.anji-plus</groupId>
+    <!-- 指定项目名称 -->
+    <artifactId>spring-boot-starter-captcha</artifactId>
+    <!-- 指定项目版本 -->
+    <version>1.3.1</version>
+
+    <!-- 指定项目名称 -->
+    <name>captcha-spring-boot-starter</name>
+    <!-- 指定项目描述 -->
+    <description>anji-plus captcha captcha-spring-boot-starter</description>
+    <!-- 指定项目URL -->
+    <url>/captcha</url>
+    <!-- 指定项目打包方式 -->
+    <packaging>jar</packaging>
+
+    <!-- 指定项目属性 -->
+    <properties>
+        <!-- 指定Java版本 -->
+        <java.version>1.8</java.version>
+        <!-- 指定Spring Boot版本 -->
+        <spring-boot-version>2.3.5.RELEASE</spring-boot-version>
+    </properties>
+
+    <!-- Add typical dependencies for a web application -->
+    <!-- 依赖 -->
+    <dependencies>
+        <!-- 验证码依赖 -->
+        <dependency>
+            <!-- 添加captcha依赖 -->
+            <groupId>com.anji-plus</groupId>
+            <artifactId>captcha</artifactId>
+            <version>1.3.1</version>
+        </dependency>
+        <!-- Spring Boot Web 依赖 -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+            <scope>provided</scope>
+        </dependency>
+        <!-- Spring Boot 自动配置依赖 -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-autoconfigure</artifactId>
+        </dependency>
+        <!-- @ConfigurationProperties annotation processing (metadata for IDEs) -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-configuration-processor</artifactId>
+            <optional>true</optional>
+        </dependency>
+    </dependencies>
+
+    <!--中央仓库上传配置开始-->
+    <licenses>
+        <!-- Apache许可证 -->
+        <license>
+            <name>The Apache Software License, Version 2.0</name>
+            <url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
+        </license>
+    </licenses>
+    <scm>
+        <!-- 仓库连接 -->
+        <connection>scm:git:git://github.com/anji-plus/OSSRH-56732.git</connection>
+        <!-- 开发者连接 -->
+        <developerConnection>scm:git:ssh://github.com/anji-plus/OSSRH-56732.git</developerConnection>
+        <!-- 仓库地址 -->
+        <url>/OSSRH-56732/tree/master</url>
+    </scm>
+
+    <!-- 开发者信息 -->
+    <developers>
+        <!-- 开发者 -->
+        <developer>
+            <!-- 开发者名称 -->
+            <name>develop.</name>
+            <!-- 开发者邮箱 -->
+            <email>.com</email>
+            <!-- 开发者主页 -->
+            <url></url>
+        </developer>
+    </developers>
+
+    <profiles>
+        <profile>
+            <!-- 定义快照仓库的ID -->
+            <id>snapshots</id>
+            <!-- 激活快照仓库 -->
+            <activation>
+                <!-- 默认激活快照仓库 -->
+                <activeByDefault>true</activeByDefault>
+            </activation>
+            <!-- 构建插件 -->
+            <build>
+                <plugins>
+                    <!-- 编译插件 -->
+                    <plugin>
+                        <groupId>org.apache.maven.plugins</groupId>
+                        <artifactId>maven-compiler-plugin</artifactId>
+                        <version>3.3</version>
+                        <configuration>
+                            <!-- 源代码版本 -->
+                            <source>1.8</source>
+                            <!-- 目标版本 -->
+                            <target>1.8</target>
+                            <!-- 编码 -->
+                            <encoding>UTF-8</encoding>
+                        </configuration>
+                    </plugin>
+                    <!-- 资源插件 -->
+                    <plugin>
+                        <groupId>org.apache.maven.plugins</groupId>
+                        <artifactId>maven-resources-plugin</artifactId>
+                        <version>2.4</version>
+                        <configuration>
+                            <!-- 编码 -->
+                            <encoding>UTF-8</encoding>
+                        </configuration>
+                    </plugin>
+                    <!-- 源代码插件 -->
+                    <plugin>
+                        <groupId>org.apache.maven.plugins</groupId>
+                        <artifactId>maven-source-plugin</artifactId>
+                        <version>2.2.1</version>
+                        <executions>
+                            <execution>
+                                <id>attach-sources</id>
+                                <goals>
+                                    <!-- 生成源代码jar包 -->
+                                    <goal>jar-no-fork</goal>
+                                </goals>
+                            </execution>
+                        </executions>
+                    </plugin>
+                    <!-- Javadoc插件 -->
+                    <plugin>
+                        <groupId>org.apache.maven.plugins</groupId>
+                        <artifactId>maven-javadoc-plugin</artifactId>
+                        <version>2.9.1</version>
+                        <executions>
+                            <execution>
+                                <id>attach-javadocs</id>
+                                <goals>
+                                    <!-- 生成javadoc文档 -->
+                                    <goal>jar</goal>
+                                </goals>
+                            </execution>
+                        </executions>
+                        <configuration>
+                            <!-- 编码 -->
+                            <encoding>UTF-8</encoding>
+                            <!-- 忽略警告 -->
+                            <additionalparam>-Xdoclint:none</additionalparam>
+                        </configuration>
+                    </plugin>
+                    <!-- GPG插件 -->
+                    <plugin>
+                        <groupId>org.apache.maven.plugins</groupId>
+                        <artifactId>maven-gpg-plugin</artifactId>
+                        <version>1.5</version>
+                        <executions>
+                            <execution>
+                                <id>sign-artifacts</id>
+                                <!-- 在site阶段执行 -->
+                                <phase>site</phase>
+                                <goals>
+                                    <!-- 签名 -->
+                                    <goal>sign</goal>
+                                </goals>
+                            </execution>
+                        </executions>
+                    </plugin>
+                </plugins>
+            </build>
+            <!-- 【注】snapshotRepository 与 repository 中的 id 一定要与 setting.xml 中 server 的 id 保持一致！ -->
+            <!-- 配置发布管理 -->
+            <distributionManagement>
+                <!-- 配置快照仓库 -->
+                <snapshotRepository>
+                    <!-- 仓库ID -->
+                    <id>releases</id>
+                    <!-- 仓库URL -->
+                    <url>https://oss.sonatype.org/content/repositories/snapshots</url>
+                </snapshotRepository>
+                <!-- 配置发布仓库 -->
+                <repository>
+                    <!-- 仓库ID -->
+                    <id>releases</id>
+                    <!-- 仓库URL -->
+                    <url>https://oss.sonatype.org/service/local/staging/deploy/maven2</url>
+                </repository>
+            </distributionManagement>
+        </profile>
+    </profiles>
+    <!--中央仓库上传配置结束-->
+</project>
