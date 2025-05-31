@@ -67,13 +67,69 @@ Captcha行为验证码，包含滑动拼图、文字点选两种方式，UI支�
         // 浏览器信息
         "browserInfo": null
     },
-    // 是否成功
     "success": true
 }
 ```
 
+```java
+{
+    "captchaType":"blockPuzzle", // 验证码类型为滑块拼图
+        "clientUid":"slider-2c59646e-597f-4775-99df-5a2c97dcdb3b", // 客户端唯一标识
+        "ts":1748683526375 // 时间戳
+}
+```
 
+check
 
+```java
+{
+    "captchaType":"blockPuzzle", // 验证码类型为滑块拼图
+        "pointJson":"82k8ETAxYspsVTWAPPRubnR7Fq+jSwQYu3VexgTaE0w=", // 验证码坐标信息
+        "token":"27d33302f2a14edb9185921d9d730525" // 验证码token
+}
+```
+
+```java
+{
+    "repCode": "0000",
+    "repMsg": null,
+    "repData": {
+        // 验证码ID
+        "captchaId": null,
+        // 项目代码
+        "projectCode": null,
+        // 验证码类型
+        "captchaType": null,
+        // 验证码原始路径
+        "captchaOriginalPath": null,
+        // 验证码字体类型
+        "captchaFontType": null,
+        // 验证码字体大小
+        "captchaFontSize": null,
+        // 密钥
+        "secretKey": "Y6kvfzIo0fRaE5E0",
+        // 原始图片Base64编码
+        "originalImageBase64": "iVBORw0KGgoAAAANSUhEUgAAATYAAACbCAIAAABnKyB6AACAAElEQVR42kS8d3Mj6ZXu2R9o/AfwAJNL2YpFHlWgAAAABJRU5ErkJggg==",
+        // 单词列表
+        "wordList": null,
+        // 点列表
+        "pointList": null,
+        // 点JSON
+        "pointJson": null,
+        "token": "373193ae2724486983ffc72430c42050",
+        "result": false,
+        // 验证码验证
+        "captchaVerification": null,
+        // 客户端UID
+        "clientUid": null,
+        // 时间戳
+        "ts": null,
+        // 浏览器信息
+        "browserInfo": null
+    },
+    "success": true
+}
+```
 
 
 
