@@ -26,4 +26,54 @@ Captcha行为验证码，包含滑动拼图、文字点选两种方式，UI支�
 
 第二步，启动前端，使用visual code打开文件夹view/vue，npm install后npm run dev，浏览器登录<br>
 
-![img.png](./img.png)
+![img_1.png](./img_1.png)
+
+```java
+{
+    "repCode": "0000",
+    "repMsg": null,
+    "repData": {
+        // 验证码ID
+        "captchaId": null,
+        // 项目代码
+        "projectCode": null,
+        // 验证码类型
+        "captchaType": null,
+        // 验证码原图路径
+        "captchaOriginalPath": null,
+        // 验证码字体类型
+        "captchaFontType": null,
+        // 验证码字体大小
+        "captchaFontSize": null,
+        // 密钥
+        "secretKey": "loaU5rfAQD0rWTag",
+        // 原始图片Base64编码
+        "originalImageBase64": "iVfYNu+OHvm6/37PKiXhgexuDwWAwGAwGg8FgMBgMBoPBYDAYDAaDwWAwGAwGg8FgMBgMBoPBYDAYDMYty78AsHlJMbliz9QAAAAASUVORK5CYII=",
+        // 字母列表
+        "wordList": null,
+        // 点列表
+        "pointList": null,
+        // 点JSON
+        "pointJson": null,
+        // 令牌
+        "token": "1611590c12474d00ac2bf81a63512d19",
+        "result": false,
+        // 验证码验证
+        "captchaVerification": null,
+        // 客户端UID
+        "clientUid": null,
+        // 时间戳
+        "ts": null,
+        // 浏览器信息
+        "browserInfo": null
+    },
+    // 是否成功
+    "success": true
+}
+```
+
+
+
+
+
+
