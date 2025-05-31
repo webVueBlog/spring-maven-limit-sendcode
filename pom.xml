@@ -3,16 +3,16 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0"
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-    <!-- 指定Maven项目的模型版本 -->
+    <!-- 指定Maven项目的模型版本 --><!-- 模型版本：固定为4.0.0 -->
     <modelVersion>4.0.0</modelVersion>
 
-    <!-- 定义项目的组ID -->
+    <!-- 定义项目的组ID --><!-- 组织或公司名称 -->
     <groupId>com.gd.captcha</groupId>
-    <!-- 定义项目的工件ID -->
+    <!-- 定义项目的工件ID --><!-- 模块名称：验证码父模块 -->
     <artifactId>gd-captcha-parent</artifactId>
-    <!-- 定义项目的版本 -->
+    <!-- 定义项目的版本 --><!-- 版本号：即将发布正式版 -->
     <version>0.0.1-SNAPSHOT</version>
-    <!-- 定义项目的打包方式 -->
+    <!-- 定义项目的打包方式 --><!-- 打包类型：父项目用pom -->
     <packaging>pom</packaging>
 
     <!-- 定义项目的属性 -->

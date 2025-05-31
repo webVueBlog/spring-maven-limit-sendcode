@@ -14,8 +14,8 @@
 
     <!-- 项目名称、描述、URL、打包方式 -->
     <name>${project.groupId}:${project.artifactId}</name>
-    <description>anji-plus captcha.jar</description>
-    <url>/captcha</url>
+    <description>captcha</description>
+    <url>captcha</url>
     <packaging>jar</packaging>
 
     <!-- 项目属性 -->
