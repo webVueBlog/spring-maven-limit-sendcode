@@ -8,7 +8,6 @@
               <!-- {{getAccessUser.userName}} -->
               <el-button class="goOut"><i class="icon iconfont icon-zhuxiao" />退出</el-button>
             </div>
-            <a @click="goHome"><img class="logo" src="./../../assets/image/logo2.png" alt=""></a>
             <div class="nav-md fr">
               <el-menu-item v-for="(item,i) in navList" :key="i" :index="item.name" class="fr">{{ item.navItem }}</el-menu-item>
             </div>

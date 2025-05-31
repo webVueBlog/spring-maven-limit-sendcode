@@ -7,9 +7,9 @@
     <modelVersion>4.0.0</modelVersion>
 
     <!-- 定义项目的组ID -->
-    <groupId>com.anji.captcha</groupId>
+    <groupId>com.gd.captcha</groupId>
     <!-- 定义项目的工件ID -->
-    <artifactId>aj-captcha-parent</artifactId>
+    <artifactId>gd-captcha-parent</artifactId>
     <!-- 定义项目的版本 -->
     <version>0.0.1-SNAPSHOT</version>
     <!-- 定义项目的打包方式 -->

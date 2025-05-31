@@ -29,11 +29,6 @@ export default new Router({
       component: () => import('./../views/doc/doc.vue')
     },
     {
-      path: '/apply',
-      name: 'apply',
-      component: () => import('./../views/apply/index.vue')
-    },
-    {
       path: '/login',
       name: 'login-2',
       component: () => import('./../views/Login.vue')
