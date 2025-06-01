@@ -20,9 +20,8 @@
     <!-- 指定项目名称 -->
     <name>captcha-springboot-demo</name>
     <!-- 指定项目描述 -->
-    <description>anji-plus captcha demo</description>
+    <description>captcha</description>
     <!-- 指定项目网址 -->
-    <url>/captcha</url>
     <!-- 指定项目打包方式 -->
     <packaging>jar</packaging>
 
